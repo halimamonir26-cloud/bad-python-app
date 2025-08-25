@@ -1,0 +1,12 @@
+rules:
+  - id: python-exec-detected
+    pattern: exec($X)
+    message: "⚠️ Use of exec() detected – possible code injection"
+    severity: ERROR
+    languages: [python]
+
+  - id: python-os-system
+    pattern: os.system($CMD)
+    message: "⚠️ Use of os.system() detected – possible command injection"
+    severity: WARNING
+    languages: [python]
