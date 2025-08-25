@@ -25,4 +25,4 @@ jobs:
       - name: Run Semgrep
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-        run: semgrep ci
+        run: semgrep --config auto --config custom-python-rules.yml
